@@ -1,0 +1,45 @@
+schema_version: 2
+default_locale: en
+title: "[gHacks] Apps with Cloud Run"
+description: "Learn how to build, deploy and run applications with Cloud Run on Google Cloud."
+instruction:
+  type: md
+  uri: instructions/en.md
+duration: 480
+max_duration: 600
+credits: 0
+level: fundamental
+tags:
+- venema
+- ghacks
+- run 
+- ghacks001
+product_tags: 
+role_tags:
+- site reliability engineers / dev ops
+- developers backend
+- data engineer
+domain_tags:
+- application development
+environment:
+  resources:
+  - type: gcp_project
+    id: project
+    startup_script:
+      type: qwiklabs
+      path: artifacts
+  - type: gcp_user
+    id: user
+    permissions:
+    - project: project
+      roles:
+      - roles/owner
+  student_visible_outputs:
+  - label: Open Console
+    reference: project.console_url
+  - label: Username 1
+    reference: user.username
+  - label: Password 1
+    reference: user.password
+  - label: Project ID
+    reference: project.project_id
