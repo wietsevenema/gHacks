@@ -38,11 +38,6 @@ resource "google_project_service" "iam" {
   service = "iam.googleapis.com"
 }
 
-# Cloud Logging API
-resource "google_project_service" "logging" {
-  service = "logging.googleapis.com"
-}
-
 # Cloud Monitoring API
 resource "google_project_service" "monitoring" {
   service = "monitoring.googleapis.com"
@@ -78,29 +73,9 @@ resource "google_project_service" "serviceusage" {
   service = "serviceusage.googleapis.com"
 }
 
-# Cloud SQL
-resource "google_project_service" "sql-component" {
-  service = "sql-component.googleapis.com"
-}
-
 # Cloud SQL Admin API
 resource "google_project_service" "sqladmin" {
   service = "sqladmin.googleapis.com"
-}
-
-# Google Cloud Storage JSON API
-resource "google_project_service" "storage-api" {
-  service = "storage-api.googleapis.com"
-}
-
-# Cloud Storage
-resource "google_project_service" "storage-component" {
-  service = "storage-component.googleapis.com"
-}
-
-# Cloud Storage API
-resource "google_project_service" "storage" {
-  service = "storage.googleapis.com"
 }
 
 # Serverless VPC Access API
@@ -133,6 +108,10 @@ resource "google_sql_database_instance" "instance" {
   database_version = "POSTGRES_14"
   name             = "postgres"  
   region           = var.gcp_region
+
+  depends_on = [
+    google_project_service.sqladmin
+  ]
 
   settings {
     activation_policy = "ALWAYS"

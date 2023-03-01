@@ -12,3 +12,9 @@ variable "gcp_region" {
   type        = string
   description = "Region to create resources in."
 }
+
+# Default value passed in
+variable "gcp_zone" {
+  type        = string
+  description = "Zone to create resources in."
+}

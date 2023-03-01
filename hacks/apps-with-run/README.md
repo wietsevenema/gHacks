@@ -1,39 +1,6 @@
-# Implementing MLOps on GCP
-
-## Introduction
+# Building Serverless Applications with Google Cloud Run
 
 In this hack, you’ll learn how to deploy an application on Cloud Run. 
 
-## Learning Objectives
-
-This hack will help you explore the following tasks:
-
-- ...
-
-> The instructions are intentionally minimal. That's by design.
-
-## Challenges
-
-- Challenge 1: ...
-
-## Prerequisites
-
-- Experience with building web applications
-- Access to a Google Cloud project
-
-## Contributors
-
-- Wietse Venema
-
-## Challenge 1: Getting started
-
-### Introduction
-
-### Description 
-
-### Success Criteria
-
-### Tips
-
-### Learning Resources
+[Open lab instructions](https://docs.google.com/document/d/1STYDGk9QNwRxFWYZSuWb_i4sYj3THIeKJaMqleFqCfI/view) (hit Request Access if prompted)
 
